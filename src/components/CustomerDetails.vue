@@ -3,24 +3,23 @@
     class="modal fade show d-block"
     tabindex="-1"
     style="background-color: rgba(0, 0, 0, 0.5)"
-    role="dialog"
   >
-    <div class="modal-dialog" role="document">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Ajouter un client</h5>
+          <h5 class="modal-title">Customer Details</h5>
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">
-          <form @submit.prevent="submitForm">
+          <form>
             <div class="mb-3">
               <label for="nom" class="form-label">Nom</label>
               <input
                 type="text"
                 class="form-control"
                 id="nom"
-                v-model="form.nom"
-                required
+                v-model="customerData.nom"
+                disabled
               />
             </div>
             <div class="mb-3">
@@ -29,8 +28,8 @@
                 type="text"
                 class="form-control"
                 id="adresse"
-                v-model="form.adresse"
-                required
+                v-model="customerData.adresse"
+                disabled
               />
             </div>
             <div class="mb-3">
@@ -39,8 +38,8 @@
                 type="email"
                 class="form-control"
                 id="email"
-                v-model="form.email"
-                required
+                v-model="customerData.email"
+                disabled
               />
             </div>
             <div class="mb-3">
@@ -49,8 +48,8 @@
                 type="text"
                 class="form-control"
                 id="telephone"
-                v-model="form.telephone"
-                required
+                v-model="customerData.telephone"
+                disabled
               />
             </div>
           </form>
@@ -59,50 +58,32 @@
           <button type="button" class="btn btn-secondary" @click="closeModal">
             Close
           </button>
-          <button type="button" class="btn btn-primary" @click="submitForm">
-            Confirm
-          </button>
         </div>
       </div>
     </div>
   </div>
 </template>
-  
-  <script setup>
-import { ref } from "vue";
 
-const form = ref({
-  nom: "",
-  adresse: "",
-  email: "",
-  telephone: "",
+<script setup>
+import { defineProps, defineEmits } from "vue";
+
+const props = defineProps({
+  customerData: {
+    type: Object,
+    required: true,
+  },
 });
 
-const emit = defineEmits(["close", "submit"]);
+const emit = defineEmits(["close"]);
 
 const closeModal = () => {
   emit("close");
 };
-
-const submitForm = () => {
-  if (
-    form.value.nom.trim() === "" ||
-    form.value.adresse.trim() === "" ||
-    form.value.email.trim() === "" ||
-    form.value.telephone.trim() === ""
-  ) {
-    alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
-    return;
-  }
-  emit("submit", form.value);
-  closeModal();
-};
 </script>
-  
-  <style scoped>
+
+<style scoped>
 .modal {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
 }
 </style>
-  

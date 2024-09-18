@@ -11,12 +11,18 @@
       @close="showModal = false"
       @submit="addCustomer"
     />
-    
+
     <CustomerEdit
       v-if="showEditModal"
       :customerData="currentCustomer"
       @close="showEditModal = false"
       @update="updateCustomer"
+    />
+
+    <CustomerDetails
+      v-if="showDetailsModal"
+      :customerData="currentCustomer"
+      @close="showDetailsModal = false"
     />
 
     <table class="table table-striped table-bordered">
@@ -36,7 +42,10 @@
           <td>{{ customer.email }}</td>
           <td>{{ customer.telephone }}</td>
           <td>
-            <button class="btn btn-sm btn-primary me-2">
+            <button
+              class="btn btn-sm btn-primary me-2"
+              @click="viewCustomerDetails(customer)"
+            >
               <i class="fa-solid fa-eye"></i>
             </button>
             <button
@@ -45,7 +54,10 @@
             >
               <i class="fa-solid fa-pen-to-square"></i>
             </button>
-            <button class="btn btn-sm btn-outline-danger">
+            <button
+              class="btn btn-sm btn-outline-danger"
+              @click="confirmDelete(customer)"
+            >
               <i class="fa-solid fa-trash"></i>
             </button>
           </td>
@@ -59,10 +71,12 @@
 import { ref } from "vue";
 import CustomerAdd from "./CustomerAdd.vue";
 import CustomerEdit from "./CustomerEdit.vue";
+import CustomerDetails from "./CustomerDetails.vue";
 
 const showModal = ref(false);
 const showEditModal = ref(false);
 const currentCustomer = ref(null);
+const showDetailsModal = ref(false);
 
 const customers = ref([
   {
@@ -141,6 +155,23 @@ const updateCustomer = (updatedCustomer) => {
   );
   if (index !== -1) {
     customers.value[index] = updatedCustomer;
+  }
+};
+
+const viewCustomerDetails = (customer) => {
+  currentCustomer.value = customer;
+  showDetailsModal.value = true;
+};
+const confirmDelete = (customer) => {
+  if (window.confirm(`Are you sure you want to delete ${customer.nom}?`)) {
+    deleteCustomer(customer);
+  }
+};
+
+const deleteCustomer = (customer) => {
+  const index = customers.value.findIndex((c) => c.email === customer.email);
+  if (index !== -1) {
+    customers.value.splice(index, 1);
   }
 };
 </script>
