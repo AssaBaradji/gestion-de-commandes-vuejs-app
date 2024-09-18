@@ -1,6 +1,8 @@
 <template>
   <!-- <h1>Bonjour les Apprenants</h1> -->
-  <table class="table table-striped table-bordered">
+  <div class="container d-flex justify-content-center mt-5 ">
+	
+	<table class="table table-striped table-bordered">
     <thead>
       <tr class="table-primary">
         <th>Nom</th>
@@ -17,13 +19,13 @@
         <td>johndoe@example.com</td>
         <td>123-456-7890</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2 ">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -34,13 +36,13 @@
         <td>janesmith@example.com</td>
         <td>098-765-4321</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2 ">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -51,13 +53,13 @@
         <td>alicemartin@example.com</td>
         <td>234-567-8901</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -68,13 +70,13 @@
         <td>davidbrown@example.com</td>
         <td>345-678-9012</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -85,13 +87,13 @@
         <td>michaeljohnson@example.com</td>
         <td>456-789-0123</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -102,13 +104,13 @@
         <td>emilyclark@example.com</td>
         <td>567-890-1234</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -119,13 +121,13 @@
         <td>robertwhite@example.com</td>
         <td>678-901-2345</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -136,13 +138,13 @@
         <td>sarahgreen@example.com</td>
         <td>789-012-3456</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -153,13 +155,13 @@
         <td>chrisblue@example.com</td>
         <td>890-123-4567</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger ">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
@@ -170,17 +172,19 @@
         <td>rachelblack@example.com</td>
         <td>901-234-5678</td>
         <td>
-          <button class="btn">
+          <button class="btn btn-sm btn-primary me-2">
             <i class="fa-solid fa-eye"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-secondary me-2">
             <i class="fa-solid fa-pen-to-square"></i>
           </button>
-          <button class="btn">
+          <button class="btn btn-sm btn-outline-danger">
             <i class="fa-solid fa-trash"></i>
           </button>
         </td>
       </tr>
     </tbody>
   </table>
+  
+  </div>
 </template>

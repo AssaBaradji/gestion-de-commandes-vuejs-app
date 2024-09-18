@@ -4,17 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css'
 import './assets/css/style.css'
 
 import { createApp } from 'vue';
-import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue';  
-import Home from "./components/customerList.vue"
+import router from './router/index'; 
 
-const routes = [
-    {path : '/', component : Home}
-];
-
-const router = createRouter({
-    history: createWebHistory(),
-    routes,
-});
 createApp(App).use(router).mount('#app');
-
