@@ -13,10 +13,9 @@ ABC Corporation souhaite développer une application Frontend dynamique avec Vue
 
 ## Fonctionnalités Clés
 
-- **Gestion des Produits** : Ajouter, lister, modifier et supprimer des produits commerciaux.
-- **Gestion des Clients** : Gestion complète des informations clients (ajout, lecture, modification, suppression).
-- **Suivi des Commandes** : Affichage et gestion des commandes passées, modification de leur statut.
-- **Tableaux dynamiques et formulaires** : Interfaces utilisateurs interactives permettant de saisir, afficher et mettre à jour les données.
+- **Gestion des Produits** : Ajouter, lister, modifier et supprimer des produits.
+- **Gestion des Clients** : Gestion complète des informations clients (ajout, lister, modification, suppression).
+- **Gestion des Commandes** : Ajouter, lister, modifier et supprimer des Commandes.
 
 ## Technologies Utilisées
 
@@ -29,55 +28,34 @@ ABC Corporation souhaite développer une application Frontend dynamique avec Vue
 ### Prérequis
 
 - **Node.js** : Assurez-vous d'avoir installé [Node.js](https://nodejs.org/) sur votre machine.
-- **Vue CLI** : Si vous ne l'avez pas encore installé, vous pouvez le faire via npm :
-
-```bash
-  npm install -g @vue/cli
-```
 
 ### Étapes d'installation
 
 1. **Cloner le dépôt**
 
-   ```bash
+```bash
    git clone https://github.com/AssaBaradji/gestion-de-commandes-vuejs-app.git
    ```
 
-2. **Accéder au répertoire du projet**
-
-   ```bash
-   cd gestion-de-commandes-vuejs-app
-   ```
-
-3. **Installer les dépendances**
-
-   ```bash
-   npm install
-   ```
-
-4. **Lancer l'application**
+2.**Accéder au répertoire du projet**
 
 ```bash
-   npm run serve
+cd gestion-de-commandes-vuejs-app
+```
+
+3.**Installer les dépendances**
+
+```bash
+   npm install
+```
+
+4.**Lancer l'application**
+
+```bash
+   npm run dev
 ```
 
 L'application sera alors accessible à l'adresse : `http://localhost:5173/orders`.
-
-## Structure du Projet
-
-```bash
-├── public
-│   └── index.html  # Point d'entrée de l'application
-├── src
-│   ├── assets      # Fichiers statiques (images, CSS...)
-│   ├── components  # Composants Vue.js
-│   ├── router      # Configuration du routing
-│   └── App.vue     # Composant racine
-│   └── main.js
-├── package.json    # Dépendances et scripts npm
-└── README.md       # Documentation du projet
-└── vite.config.js
-```
 
 ## Fonctionnalités CRUD (Create, Read, Update, Delete)
 
@@ -101,12 +79,6 @@ L'application sera alors accessible à l'adresse : `http://localhost:5173/orders
 -- **Lister les commandes** : Affichage de toutes les commandes avec pagination pour une vue claire des transactions.
 -- **Modifier une commande** : Mise à jour des détails d'une commande, y compris la commande.
 -- **Supprimer une commande** : Fonction de suppression de commande avec confirmation.
-
-## Améliorations Futures
-
-- Intégration d'une API backend pour rendre les opérations CRUD persistantes.
-- Implémentation d'un système d'authentification pour gérer les utilisateurs et leurs permissions.
-- Ajout de tests unitaires pour assurer la fiabilité.
 
 ## Auteur
 
