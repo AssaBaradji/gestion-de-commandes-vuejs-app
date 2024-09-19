@@ -1,6 +1,6 @@
 <template>
   <div class="container d-flex-column justify-content-center mt-5">
-    <h1 class="mb-4 font-weight-bold">Product of List</h1>
+    <h1 class="mb-4 font-weight-bold">List of Products</h1>
 
     <button @click="showModal = true" class="btn btn-primary mb-4 float-end">
       Add New Product
