@@ -13,8 +13,6 @@
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">
-          <!-- Afficher les détails de la commande cliquée -->
-
           <div class="row">
             <div class="col-md-6">
               <div class="mb-3">
@@ -135,7 +133,6 @@
 <script setup>
 import { ref, defineProps, defineEmits } from "vue";
 
-// Définir les props pour récupérer les données de commande
 const props = defineProps({
   orderData: {
     type: Object,
@@ -143,16 +140,12 @@ const props = defineProps({
   },
 });
 
-// Définir les événements pour fermer la modal
 const emit = defineEmits(["close"]);
 
-// Gérer la visibilité de la modal
 const isVisible = ref(true);
 
-// Formulaire basé sur les données de commande cliquées
 const form = ref({ ...props.orderData });
 
-// Fonction pour fermer la modal
 const closeModal = () => {
   emit("close");
   isVisible.value = false;

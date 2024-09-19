@@ -179,7 +179,7 @@ watch(
 
 <style scoped>
 .modal-dialog.modal-md {
-  max-width: 50%;
+  max-width: 80%;
 }
 
 .modal-content {

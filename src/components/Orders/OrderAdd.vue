@@ -4,7 +4,7 @@
       <h1>Add Order</h1>
       <div>
         <button type="button" class="btn btn-secondary me-2" @click="goHome">
-          Return to Orders
+          Orders List
         </button>
         <button type="button" class="btn btn-primary" @click="submitForm">
           Confirm
