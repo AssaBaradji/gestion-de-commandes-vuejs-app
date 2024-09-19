@@ -6,8 +6,8 @@
         <button type="button" class="btn btn-secondary me-2" @click="goHome">
           Return to Orders
         </button>
-        <button type="submit" class="btn btn-primary" @click="submitForm">
-          Submit
+        <button type="button" class="btn btn-primary" @click="submitForm">
+          Confirm
         </button>
       </div>
     </div>
@@ -146,6 +146,8 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
+const emit = defineEmits(["submit"]);
+
 const form = ref({
   date: "",
   customer: "",
@@ -178,7 +180,10 @@ const submitForm = () => {
     alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
     return;
   }
-  console.log("Order submitted:", form.value);
+
+  emit("submit", form.value);
+
+  goHome();
 };
 </script>
 

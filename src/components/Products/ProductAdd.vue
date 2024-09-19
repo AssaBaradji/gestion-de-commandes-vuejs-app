@@ -14,7 +14,6 @@
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="row">
-              <!-- Partie gauche -->
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="name" class="form-label">Product Name</label>
@@ -50,7 +49,6 @@
                 </div>
               </div>
 
-              <!-- Partie droite -->
               <div class="col-md-6">
                 <div class="mb-3">
                   <label for="category" class="form-label">Category</label>
