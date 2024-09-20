@@ -14,10 +14,9 @@
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="row">
-              <!-- Partie gauche -->
               <div class="col-md-6">
                 <div class="mb-3">
-                  <label for="name" class="form-label">Nom</label>
+                  <label for="name" class="form-label">Product Name</label>
                   <input
                     type="text"
                     class="form-control"
@@ -28,7 +27,7 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="price" class="form-label">Prix</label>
+                  <label for="price" class="form-label">Price</label>
                   <input
                     type="number"
                     class="form-control"
@@ -39,7 +38,7 @@
                 </div>
 
                 <div class="mb-3">
-                  <label for="barcode" class="form-label">Code-barres</label>
+                  <label for="barcode" class="form-label">Barcode</label>
                   <input
                     type="text"
                     class="form-control"
@@ -49,11 +48,9 @@
                   />
                 </div>
               </div>
-
-              <!-- Partie droite -->
               <div class="col-md-6">
                 <div class="mb-3">
-                  <label for="category" class="form-label">Catégorie</label>
+                  <label for="category" class="form-label">Category</label>
                   <input
                     type="text"
                     class="form-control"
@@ -73,7 +70,6 @@
                     required
                   />
                 </div>
-
                 <div class="mb-3">
                   <label for="status" class="form-label">Statut</label>
                   <select
@@ -88,8 +84,6 @@
                 </div>
               </div>
             </div>
-
-            <!-- Partie description en bas -->
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
               <textarea
@@ -146,7 +140,7 @@ const submitForm = () => {
     form.value.category.trim() === "" ||
     form.value.barcode.trim() === ""
   ) {
-    alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
+    alert("Please fill out all fields before submitting the form.");
     return;
   }
   emit("update", form.value);

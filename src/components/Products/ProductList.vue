@@ -28,12 +28,12 @@
     <table class="table table-striped table-bordered">
       <thead>
         <tr class="table-primary">
-          <th>Nom</th>
+          <th>Product Name</th>
           <th>Description</th>
-          <th>Prix</th>
+          <th>Price</th>
           <th>Stock</th>
           <th>Catégorie</th>
-          <th>Code-barres</th>
+          <th>Barcode</th>
           <th>Statut</th>
           <th>Actions</th>
         </tr>
