@@ -109,6 +109,14 @@
                 <input
                   type="number"
                   class="form-control"
+                  v-model="detail.quantity"
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  class="form-control"
                   v-model="detail.price"
                   required
                 />
