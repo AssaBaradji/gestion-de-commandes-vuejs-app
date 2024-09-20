@@ -91,20 +91,19 @@
           <tbody>
             <tr v-for="(detail, index) in form.details" :key="index">
               <td>
-                <input
-                  type="text"
-                  class="form-control"
-                  v-model="detail.product"
-                  required
-                />
-              </td>
-              <td>
-                <input
-                  type="number"
-                  class="form-control"
-                  v-model="detail.quantity"
-                  required
-                />
+                <select class="form-control" v-model="detail.product" required>
+                  <option disabled value="">Select a product</option>
+                  <option value="Product 001">Product 001</option>
+                  <option value="Product 002">Product 002</option>
+                  <option value="Product 003">Product 003</option>
+                  <option
+                    v-for="product in products"
+                    :key="product.id"
+                    :value="product.name"
+                  >
+                    {{ product.name }}
+                  </option>
+                </select>
               </td>
               <td>
                 <input
@@ -168,7 +167,11 @@ const addDetail = () => {
 };
 
 const removeDetail = (index) => {
-  form.value.details.splice(index, 1);
+  if (form.value.details.length == 1) {
+    alert("At least one item must be present.");
+  } else {
+    form.value.details.splice(index, 1);
+  }
 };
 
 const submitForm = () => {
@@ -177,7 +180,7 @@ const submitForm = () => {
       (detail) => !detail.product || detail.quantity <= 0 || detail.price <= 0
     )
   ) {
-    alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
+    alert("Please fill out all fields before submitting the form.");
     return;
   }
 

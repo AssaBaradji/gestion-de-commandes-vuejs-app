@@ -14,22 +14,22 @@
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="mb-3">
-              <label for="nom" class="form-label">Customer Name</label>
+              <label for="name" class="form-label">Customer Name</label>
               <input
                 type="text"
                 class="form-control"
-                id="nom"
-                v-model="form.nom"
+                id="name"
+                v-model="form.name"
                 required
               />
             </div>
             <div class="mb-3">
-              <label for="adresse" class="form-label">Address</label>
+              <label for="address" class="form-label">Address</label>
               <input
                 type="text"
                 class="form-control"
-                id="adresse"
-                v-model="form.adresse"
+                id="address"
+                v-model="form.address"
                 required
               />
             </div>
@@ -44,12 +44,12 @@
               />
             </div>
             <div class="mb-3">
-              <label for="telephone" class="form-label">phone</label>
+              <label for="phone" class="form-label">phone</label>
               <input
                 type="text"
                 class="form-control"
-                id="telephone"
-                v-model="form.telephone"
+                id="phone"
+                v-model="form.phone"
                 required
               />
             </div>
@@ -72,10 +72,10 @@
 import { ref } from "vue";
 
 const form = ref({
-  nom: "",
-  adresse: "",
+  name: "",
+  address: "",
   email: "",
-  telephone: "",
+  phone: "",
 });
 
 const emit = defineEmits(["close", "submit"]);
@@ -86,10 +86,10 @@ const closeModal = () => {
 
 const submitForm = () => {
   if (
-    form.value.nom.trim() === "" ||
-    form.value.adresse.trim() === "" ||
+    form.value.name.trim() === "" ||
+    form.value.address.trim() === "" ||
     form.value.email.trim() === "" ||
-    form.value.telephone.trim() === ""
+    form.value.phone.trim() === ""
   ) {
     alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
     return;

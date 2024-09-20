@@ -80,7 +80,7 @@ const orders = ref([
     deliveryAddress: "123 Main St, New York, NY",
     trackNumber: "TN001",
     status: "Shipped",
-    details: [],
+    details: [{ product: "Headphones", quantity: 10, price: 150.0 }],
   },
   {
     id: 2,
@@ -89,7 +89,10 @@ const orders = ref([
     deliveryAddress: "456 Oak St, Los Angeles, CA",
     trackNumber: "TN002",
     status: "Delivered",
-    details: [],
+    details: [
+      { product: "Laptop", quantity: 3, price: 1200.5 },
+      { product: "Smartphone", quantity: 5, price: 800.99 },
+    ],
   },
   {
     id: 3,
@@ -98,7 +101,10 @@ const orders = ref([
     deliveryAddress: "789 Pine St, Chicago, IL",
     trackNumber: "TN003",
     status: "Processing",
-    details: [],
+    details: [
+      { product: "Keyboard", quantity: 7, price: 100.75 },
+      { product: "Monitor", quantity: 4, price: 350.0 },
+    ],
   },
 ]);
 

@@ -14,21 +14,21 @@
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="mb-3">
-              <label for="nom" class="form-label">Name</label>
+              <label for="name" class="form-label">Name</label>
               <input
                 type="text"
                 class="form-control"
-                id="nom"
+                id="name"
                 v-model="form.name"
                 required
               />
             </div>
             <div class="mb-3">
-              <label for="adresse" class="form-label">Address</label>
+              <label for="address" class="form-label">Address</label>
               <input
                 type="text"
                 class="form-control"
-                id="adresse"
+                id="address"
                 v-model="form.address"
                 required
               />
@@ -44,11 +44,11 @@
               />
             </div>
             <div class="mb-3">
-              <label for="telephone" class="form-label">phone</label>
+              <label for="phone" class="form-label">phone</label>
               <input
                 type="text"
                 class="form-control"
-                id="telephone"
+                id="phone"
                 v-model="form.phone"
                 required
               />

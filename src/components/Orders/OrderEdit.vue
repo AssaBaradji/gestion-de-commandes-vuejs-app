@@ -64,8 +64,75 @@
                 </div>
               </div>
             </div>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Product</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="(detail, index) in form.details" :key="index">
+                  <td>
+                    <select class="form-control" required>
+                      <option disabled value="" selected>
+                        Select a product
+                      </option>
+                      <option value="Product 001">Product 001</option>
+                      <option value="Product 002">Product 002</option>
+                      <option value="Product 003">Product 003</option>
+                      <!-- <option
+                        v-for="product in products"
+                        :key="product.id"
+                        :value="product.name"
+                      >
+                        {{ detail.product }}
+                      </option> -->
+                    </select>
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      v-model="detail.quantity"
+                      required
+                    />
+                  </td>
+                  <td>
+                    <input
+                      type="number"
+                      class="form-control"
+                      v-model="detail.price"
+                      required
+                    />
+                  </td>
 
-            <div class="mb-4">
+                  <td class="text-center">
+                    <button
+                      type="button"
+                      class="btn btn-danger"
+                      @click="removeDetail(index)"
+                    >
+                      Remove
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      @click="addDetail"
+                    >
+                      Add New Detail
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- <div class="mb-4">
               <h5>Order Details</h5>
               <div
                 v-for="(detail, index) in form.details"
@@ -119,7 +186,7 @@
                   Add New Detail
                 </button>
               </div>
-            </div>
+            </div> -->
           </form>
         </div>
         <div class="modal-footer">
@@ -166,7 +233,11 @@ const addDetail = () => {
 };
 
 const removeDetail = (index) => {
-  form.value.details.splice(index, 1);
+  if (form.value.details.length == 1) {
+    alert("At least one item must be present.");
+  } else {
+    form.value.details.splice(index, 1);
+  }
 };
 
 watch(
