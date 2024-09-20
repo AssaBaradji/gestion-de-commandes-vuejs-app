@@ -19,7 +19,7 @@
                   <label for="name" class="form-label">Product Name</label>
                   <input
                     type="text"
-                    class="form-control form-control-plaintext"
+                    class="form-control p-sm-2 form-control-plaintext"
                     id="name"
                     :value="productData.name"
                     readonly
@@ -30,7 +30,7 @@
                   <label for="price" class="form-label">Price</label>
                   <input
                     type="text"
-                    class="form-control form-control-plaintext"
+                    class="form-control p-sm-2 form-control-plaintext"
                     id="price"
                     :value="productData.price"
                     readonly
@@ -41,7 +41,7 @@
                   <label for="barcode" class="form-label">Barcode</label>
                   <input
                     type="text"
-                    class="form-control form-control-plaintext"
+                    class="form-control p-sm-2 form-control-plaintext"
                     id="barcode"
                     :value="productData.barcode"
                     readonly
@@ -54,7 +54,7 @@
                   <label for="category" class="form-label">Category</label>
                   <input
                     type="text"
-                    class="form-control form-control-plaintext"
+                    class="form-control p-sm-2 form-control-plaintext"
                     id="category"
                     :value="productData.category"
                     readonly
@@ -65,7 +65,7 @@
                   <label for="stock" class="form-label">Stock</label>
                   <input
                     type="text"
-                    class="form-control form-control-plaintext"
+                    class="form-control p-sm-2 form-control-plaintext"
                     id="stock"
                     :value="productData.stock"
                     readonly
@@ -76,7 +76,7 @@
                   <label for="status" class="form-label">Statut</label>
                   <input
                     type="text"
-                    class="form-control form-control-plaintext"
+                    class="form-control p-sm-2 form-control-plaintext"
                     id="status"
                     :value="productData.status"
                     readonly
@@ -88,7 +88,7 @@
             <div class="mb-3">
               <label for="description" class="form-label">Description</label>
               <textarea
-                class="form-control form-control-plaintext"
+                class="form-control p-sm-2 form-control-plaintext"
                 id="description"
                 rows="3"
                 :value="productData.description"
