@@ -8,13 +8,13 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Ajouter un client</h5>
+          <h5 class="modal-title">Create new customer </h5>
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="mb-3">
-              <label for="nom" class="form-label">Nom</label>
+              <label for="nom" class="form-label">Customer Name</label>
               <input
                 type="text"
                 class="form-control"
@@ -24,7 +24,7 @@
               />
             </div>
             <div class="mb-3">
-              <label for="adresse" class="form-label">Adresse</label>
+              <label for="adresse" class="form-label">Address</label>
               <input
                 type="text"
                 class="form-control"
@@ -44,7 +44,7 @@
               />
             </div>
             <div class="mb-3">
-              <label for="telephone" class="form-label">Téléphone</label>
+              <label for="telephone" class="form-label">phone</label>
               <input
                 type="text"
                 class="form-control"

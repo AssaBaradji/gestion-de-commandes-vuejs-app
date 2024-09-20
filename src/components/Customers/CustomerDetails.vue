@@ -7,28 +7,28 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Customer Details</h5>
+          <h5 class="modal-title">View Customer</h5>
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">
           <form>
             <div class="mb-3">
-              <label for="nom" class="form-label">Nom</label>
+              <label for="nom" class="form-label">Customer Name</label>
               <input
                 type="text"
                 class="form-control"
                 id="nom"
-                v-model="customerData.nom"
+                v-model="customerData.name"
                 disabled
               />
             </div>
             <div class="mb-3">
-              <label for="adresse" class="form-label">Adresse</label>
+              <label for="adresse" class="form-label">Address</label>
               <input
                 type="text"
                 class="form-control"
                 id="adresse"
-                v-model="customerData.adresse"
+                v-model="customerData.address"
                 disabled
               />
             </div>
@@ -43,12 +43,12 @@
               />
             </div>
             <div class="mb-3">
-              <label for="telephone" class="form-label">Téléphone</label>
+              <label for="telephone" class="form-label">phone</label>
               <input
                 type="text"
                 class="form-control"
                 id="telephone"
-                v-model="customerData.telephone"
+                v-model="customerData.phone"
                 disabled
               />
             </div>

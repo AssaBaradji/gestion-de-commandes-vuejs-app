@@ -1,6 +1,6 @@
 <template>
   <div class="container d-flex-column justify-content-center mt-5">
-    <h1 class="mb-4 font-weight-bold">List of customers</h1>
+    <h1 class="mb-4 font-weight-bold">List of Customers</h1>
 
     <button @click="showModal = true" class="btn btn-primary mb-4 float-end">
       Add New Customer
@@ -28,19 +28,19 @@
     <table class="table table-striped table-bordered">
       <thead>
         <tr class="table-primary">
-          <th>Nom</th>
-          <th>Adresse</th>
+          <th>Name</th>
+          <th>Address</th>
           <th>Email</th>
-          <th>Téléphone</th>
+          <th>phone</th>
           <th>Actions</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(customer, index) in customers" :key="index">
-          <td>{{ customer.nom }}</td>
-          <td>{{ customer.adresse }}</td>
+          <td>{{ customer.name }}</td>
+          <td>{{ customer.address }}</td>
           <td>{{ customer.email }}</td>
-          <td>{{ customer.telephone }}</td>
+          <td>{{ customer.phone }}</td>
           <td>
             <button
               class="btn btn-sm btn-primary me-2"
@@ -80,64 +80,64 @@ const showDetailsModal = ref(false);
 
 const customers = ref([
   {
-    nom: "John Doe",
-    adresse: "123 Main St, New York, NY",
+    name: "John Doe",
+    address: "123 Main St, New York, NY",
     email: "johndoe@example.com",
-    telephone: "123-456-7890",
+    phone: "123-456-7890",
   },
   {
-    nom: "Jane Smith",
-    adresse: "456 Oak St, Los Angeles, CA",
+    name: "Jane Smith",
+    address: "456 Oak St, Los Angeles, CA",
     email: "janesmith@example.com",
-    telephone: "987-654-3210",
+    phone: "987-654-3210",
   },
   {
-    nom: "David Johnson",
-    adresse: "789 Pine St, Chicago, IL",
+    name: "David Johnson",
+    address: "789 Pine St, Chicago, IL",
     email: "davidjohnson@example.com",
-    telephone: "555-555-5555",
+    phone: "555-555-5555",
   },
   {
-    nom: "Emily Davis",
-    adresse: "321 Cedar St, San Francisco, CA",
+    name: "Emily Davis",
+    address: "321 Cedar St, San Francisco, CA",
     email: "emilydavis@example.com",
-    telephone: "111-222-3333",
+    phone: "111-222-3333",
   },
   {
-    nom: "Michael Brown",
-    adresse: "654 Walnut St, Houston, TX",
+    name: "Michael Brown",
+    address: "654 Walnut St, Houston, TX",
     email: "michaelbrown@example.com",
-    telephone: "444-555-6666",
+    phone: "444-555-6666",
   },
   {
-    nom: "Olivia Williams",
-    adresse: "987 Maple St, Miami, FL",
+    name: "Olivia Williams",
+    address: "987 Maple St, Miami, FL",
     email: "oliviawilliams@example.com",
-    telephone: "777-888-9999",
+    phone: "777-888-9999",
   },
   {
-    nom: "Sophia Miller",
-    adresse: "101 Elm St, Seattle, WA",
+    name: "Sophia Miller",
+    address: "101 Elm St, Seattle, WA",
     email: "sophiamiller@example.com",
-    telephone: "222-333-4444",
+    phone: "222-333-4444",
   },
   {
-    nom: "James Wilson",
-    adresse: "303 Birch St, Boston, MA",
+    name: "James Wilson",
+    address: "303 Birch St, Boston, MA",
     email: "jameswilson@example.com",
-    telephone: "555-666-7777",
+    phone: "555-666-7777",
   },
   {
-    nom: "Charlotte Anderson",
-    adresse: "505 Redwood St, Denver, CO",
+    name: "Charlotte Anderson",
+    address: "505 Redwood St, Denver, CO",
     email: "charlotteanderson@example.com",
-    telephone: "888-999-0000",
+    phone: "888-999-0000",
   },
   {
-    nom: "Liam Martinez",
-    adresse: "707 Spruce St, Phoenix, AZ",
+    name: "Liam Martinez",
+    address: "707 Spruce St, Phoenix, AZ",
     email: "liammartinez@example.com",
-    telephone: "123-987-6543",
+    phone: "123-987-6543",
   },
 ]);
 
@@ -163,7 +163,7 @@ const viewCustomerDetails = (customer) => {
   showDetailsModal.value = true;
 };
 const confirmDelete = (customer) => {
-  if (window.confirm(`Are you sure you want to delete ${customer.nom}?`)) {
+  if (window.confirm(`Are you sure you want to delete ${customer.name}?`)) {
     deleteCustomer(customer);
   }
 };

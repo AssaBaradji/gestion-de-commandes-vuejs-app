@@ -8,28 +8,28 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Modifier les informations du client</h5>
+          <h5 class="modal-title">Edit Customer</h5>
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">
           <form @submit.prevent="submitForm">
             <div class="mb-3">
-              <label for="nom" class="form-label">Nom</label>
+              <label for="nom" class="form-label">Name</label>
               <input
                 type="text"
                 class="form-control"
                 id="nom"
-                v-model="form.nom"
+                v-model="form.name"
                 required
               />
             </div>
             <div class="mb-3">
-              <label for="adresse" class="form-label">Adresse</label>
+              <label for="adresse" class="form-label">Address</label>
               <input
                 type="text"
                 class="form-control"
                 id="adresse"
-                v-model="form.adresse"
+                v-model="form.address"
                 required
               />
             </div>
@@ -44,12 +44,12 @@
               />
             </div>
             <div class="mb-3">
-              <label for="telephone" class="form-label">Téléphone</label>
+              <label for="telephone" class="form-label">phone</label>
               <input
                 type="text"
                 class="form-control"
                 id="telephone"
-                v-model="form.telephone"
+                v-model="form.phone"
                 required
               />
             </div>
@@ -78,10 +78,10 @@ const props = defineProps({
 });
 
 const form = ref({
-  nom: "",
-  adresse: "",
+  name: "",
+  address: "",
   email: "",
-  telephone: "",
+  phone: "",
 });
 
 watch(
