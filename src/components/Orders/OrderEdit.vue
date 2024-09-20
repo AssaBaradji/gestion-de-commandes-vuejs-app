@@ -132,61 +132,6 @@
                 </tr>
               </tbody>
             </table>
-            <!-- <div class="mb-4">
-              <h5>Order Details</h5>
-              <div
-                v-for="(detail, index) in form.details"
-                :key="index"
-                class="mb-3 row"
-              >
-                <div class="col-md-6">
-                  <label class="form-label">Product</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    v-model="detail.product"
-                    required
-                  />
-                </div>
-
-                <div class="col-md-3">
-                  <label class="form-label">Quantity</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    v-model="detail.quantity"
-                    required
-                  />
-                </div>
-                <div class="col-md-3">
-                  <label class="form-label">Price</label>
-                  <input
-                    type="number"
-                    class="form-control"
-                    v-model="detail.price"
-                    required
-                  />
-                </div>
-                <div class="col-md-1 d-flex align-items-center mt-3">
-                  <button
-                    type="button"
-                    class="btn btn-danger"
-                    @click="removeDetail(index)"
-                  >
-                    Remove
-                  </button>
-                </div>
-              </div>
-              <div>
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  @click="addDetail"
-                >
-                  Add New Detail
-                </button>
-              </div>
-            </div> -->
           </form>
         </div>
         <div class="modal-footer">
