@@ -13,9 +13,9 @@ ABC Corporation souhaite développer une application Frontend dynamique avec Vue
 
 ## Fonctionnalités Clés
 
-- **Gestion des Produits** : Ajouter, lister, modifier et supprimer des produits.
-- **Gestion des Clients** : Gestion complète des informations clients (ajout, lister, modification, suppression).
-- **Gestion des Commandes** : Ajouter, lister, modifier et supprimer des Commandes.
+- **Gestion des Produits** : Interface pour ajouter, lister, modifier et supprimer des produits.
+- **Gestion des Clients** : Interface pour gérer les informations clients (ajout, liste, modification, suppression).
+- **Gestion des Commandes** : Interface pour ajouter, lister, modifier et supprimer des commandes.
 
 ## Technologies Utilisées
 
@@ -35,7 +35,7 @@ ABC Corporation souhaite développer une application Frontend dynamique avec Vue
 
 ```bash
    git clone https://github.com/AssaBaradji/gestion-de-commandes-vuejs-app.git
-   ```
+```
 
 2.**Accéder au répertoire du projet**
 
@@ -61,24 +61,24 @@ L'application sera alors accessible à l'adresse : `http://localhost:5173/orders
 
 ### Gestion des Produits
 
--- **Ajouter un produit** : Le formulaire permet d'entrer les informations du produit, telles que le nom, le prix et la quantité en stock.
--- **Lister les produits** : Affichage dynamique de la liste des produits avec une fenetre modal pour faciliter la navigation.
--- **Modifier un produit** : Une vue détaillée permet de modifier les informations d'un produit existant.
--- **Supprimer un produit** : Suppression de produit avec une boîte de confirmation pour éviter les suppressions accidentelles.
+- **Ajouter un produit** : Interface pour saisir les informations du produit, telles que le nom, le prix et la quantité en stock.
+- **Lister les produits** : Interface affichant les produits dans un tableau avec des boutons d'action pour voir les details, modifier et supprimer.
+- **Modifier un produit** : Interface permettant de modifier les informations d'un produit existant, affichée dans une fenêtre modale.
+- **Supprimer un produit** : Interface pour confirmer la suppression d'un produit, incluant une boîte de confirmation.
 
 ### Gestion des Clients
 
--- **Ajouter un client** : Le formulaire permet d'ajouter un nouveau client en renseignant des informations comme le nom, l'adresse ,l'email et le numéro de téléphone.
--- **Lister les clients** : Affichage d'une liste des clients avec pagination pour une gestion facile.
--- **Modifier un client** : Possibilité de mettre à jour les informations d'un client spécifique via une interface de modification intuitive.
--- **Supprimer un client**: Suppression d'un client après confirmation, avec mise à jour instantanée de la liste.
+- **Ajouter un client** : Formulaire d'interface pour entrer les informations d'un nouveau client, comme le nom, l'adresse, l'email et le numéro de téléphone.
+- **Lister les clients** : Interface affichant la liste des clients, avec des boutons d'action pour voir les details, modifier et supprimer.
+- **Modifier un client** : Interface permettant de mettre à jour les informations d'un client spécifique, affichée dans une fenêtre modale.
+- **Supprimer un client** : Interface de suppression avec confirmation, qui met à jour la liste après l'action.
 
 ### Gestion des Commandes
 
--- **Ajouter une commande** : Enregistrement des nouvelles commandes avec les produits associés.
--- **Lister les commandes** : Affichage de toutes les commandes avec pagination pour une vue claire des transactions.
--- **Modifier une commande** : Mise à jour des détails d'une commande, y compris la commande.
--- **Supprimer une commande** : Fonction de suppression de commande avec confirmation.
+- **Ajouter une commande** : Interface pour enregistrer de nouvelles commandes avec les produits associés.
+- **Lister les commandes** : Interface affichant toutes les commandes, avec des boutons d'action pour voir les details, modifier et supprimer.
+- **Modifier une commande** : Interface permettant de mettre à jour une commande les détails d'une commande, affichée dans une fenêtre modale.
+- **Supprimer une commande** : Interface de suppression de commande avec confirmation.
 
 ## Auteur
 

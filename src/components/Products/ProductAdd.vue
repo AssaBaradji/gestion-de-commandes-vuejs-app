@@ -140,7 +140,7 @@ const submitForm = () => {
     form.value.barcode.trim() === "" ||
     form.value.description.trim() === ""
   ) {
-    alert("Veuillez remplir tous les champs avant de soumettre le formulaire.");
+    alert("Please fill out all fields before submitting the form.");
     return;
   }
   emit("submit", form.value);

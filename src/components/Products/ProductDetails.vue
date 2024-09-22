@@ -8,7 +8,7 @@
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content" style="background-color: #fff; color: #333">
         <div class="modal-header">
-          <h5 class="modal-title">Détails du produit</h5>
+          <h5 class="modal-title">View Product</h5>
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">

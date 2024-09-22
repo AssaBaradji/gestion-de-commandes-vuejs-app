@@ -32,9 +32,9 @@
           <th>Description</th>
           <th>Price</th>
           <th>Stock</th>
-          <th>Catégorie</th>
+          <th>category</th>
           <th>Barcode</th>
-          <th>Statut</th>
+          <th>Status</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -138,7 +138,7 @@ const viewProductDetails = (product) => {
 };
 
 const confirmDelete = (product) => {
-  if (window.confirm(`Êtes-vous sûr de vouloir supprimer ${product.name}?`)) {
+  if (window.confirm(`Are you sure you want to delete ${product.name}?`)) {
     deleteProduct(product);
   }
 };
