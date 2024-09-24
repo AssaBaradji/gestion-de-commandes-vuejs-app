@@ -28,10 +28,12 @@
                 class="form-control"
                 id="address"
                 rows="3"
-                v-model="form.address"
+                v-model="customerData.address"
+                disabled
                 required
               ></textarea>
             </div>
+
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
               <input
