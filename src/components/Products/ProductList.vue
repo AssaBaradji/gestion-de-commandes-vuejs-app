@@ -32,7 +32,7 @@
           <th>Description</th>
           <th>Price</th>
           <th>Stock</th>
-          <th>category</th>
+          <th>Category</th>
           <th>Barcode</th>
           <th>Status</th>
           <th>Actions</th>

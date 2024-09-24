@@ -8,7 +8,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Create new customer </h5>
+          <h5 class="modal-title">Create new customer</h5>
           <button type="button" class="btn-close" @click="closeModal"></button>
         </div>
         <div class="modal-body">
@@ -25,13 +25,13 @@
             </div>
             <div class="mb-3">
               <label for="address" class="form-label">Address</label>
-              <input
-                type="text"
+              <textarea
                 class="form-control"
                 id="address"
+                rows="3"
                 v-model="form.address"
                 required
-              />
+              ></textarea>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Email</label>
