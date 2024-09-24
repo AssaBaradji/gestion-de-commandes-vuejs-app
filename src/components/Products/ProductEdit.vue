@@ -19,9 +19,10 @@
                   <label for="name" class="form-label">Product Name</label>
                   <input
                     type="text"
-                    class="form-control "
+                    class="form-control"
                     id="name"
                     v-model="form.name"
+                    disabled
                     required
                   />
                 </div>
@@ -152,6 +153,9 @@ const submitForm = () => {
 .modal {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-dialog {
+  margin-top: 3%; 
 }
 </style>
   

@@ -132,5 +132,8 @@ const closeModal = () => {
   color: #495057;
   cursor: not-allowed;
 }
+.modal-dialog {
+  margin-top: 3%; 
+}
 </style>
   

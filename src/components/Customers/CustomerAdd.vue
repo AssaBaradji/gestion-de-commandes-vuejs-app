@@ -44,7 +44,7 @@
               />
             </div>
             <div class="mb-3">
-              <label for="phone" class="form-label">phone</label>
+              <label for="phone" class="form-label">Phone</label>
               <input
                 type="text"
                 class="form-control"
@@ -103,6 +103,10 @@ const submitForm = () => {
 .modal {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-dialog {
+  max-width: 50%; 
+  margin-top: 3%; 
 }
 </style>
   
